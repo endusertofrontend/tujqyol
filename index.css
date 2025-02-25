@@ -1,0 +1,586 @@
+
+/* ===================
+ Nav CSS
+ =====================*/
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  nav {
+    background-color: #333;
+    padding: 10px 0;
+  }
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: right; /* Center the nav */
+    padding: 0;
+  }
+
+  li {
+    margin: 0 10px;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background 0.3s ease-in-out;
+  }
+
+  li a:hover {
+    background-color: #111;
+    border-radius: 5px;
+  }
+
+  .active {
+    background-color: #04AA6D;
+    border-radius: 5px;
+  }
+
+  
+
+  /* =============
+  layout CSS 
+  =============== */
+
+  body {
+    display: flex; 
+    flex-direction: column;
+  }
+
+  .mainImage img {
+    margin: 0; 
+    padding: 0; 
+    max-height: 60vh; /* 60% fo teh view port heigh */
+    /* ensures the image convers the width without stretching */
+    object-fit:cover; 
+    width: 100%; 
+    object-position: top; /* crops image from the bottom */
+  }
+
+  /* ======
+  CSS for banner creation
+  ========== */
+  .mainImage {
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 100%;
+    height: auto; /* Adjust height dynamically */
+}
+
+.mainImage img {
+    width: 100%; /* Make sure it fills the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any unwanted space */
+}
+
+.mainImage div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Limit text width for readability */
+}
+
+.mainImage h1 {
+    font-size: 7rem;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Add contrast */
+}
+
+
+/* ===============
+  main CSS
+================== */
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.projects {
+  display: flex; 
+  gap: 2rem; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* ===== 
+universal audio CSS
+======== */
+
+audio {
+  background-color: #f0f0f0; /* Optional: Light background to match your design */
+  border-radius: 10px; /* Slightly rounded corners */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for a modern touch */
+}
+
+audio:hover, audio:focus {
+  border-color: #aaa; /* Changes border color when hovered or focused */
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow effect */
+  }  
+
+/* first project CSS */
+.inner-container {
+  display: flex;
+  gap: 2rem; 
+  justify-content: center; 
+}
+
+/* ==========
+first content CSS
+============ */
+
+.content-one {
+  color: white;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  width: 35%;
+  padding: 10px;
+  border-radius: 10px; /* Soft rounded edges */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center; /* Center text inside */
+  max-height: 1100px;
+}
+
+.content-one {
+  background-image: url("images/bloodCell.jpg");
+  background-size: cover;  /* Ensures the image covers the entire div */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents tiling */
+}
+
+
+.content-one h1 {
+  margin-top: 15px;
+  font-family: Arial, sans-serif;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.content-one audio {
+  color: red;
+  width: 80%;
+   /* Full width for consistency */
+  margin: 15px 0;
+}
+
+.content-one p {
+  font-family: "Noto Sans", "Arial Unicode MS", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  text-align: justify;
+  padding: 10px;
+}
+
+.content-one .textcontainer {
+  overflow: auto;
+  width: 100%;
+  max-height: 780px; 
+  padding: 10px;
+  text-align: left;    
+  padding: 4%;
+}
+
+.content-one .textcontainer h4 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+/* to center text */
+.content-one {
+  display: flex;
+  flex-direction: column;  
+  align-items: center; /* Centers horizontally */
+  justify-content: center; /* Centers vertically */
+  gap: 1rem;  
+  height: 100vh; /* Ensures the container takes up the full viewport height */
+}
+
+
+
+
+/* ==============
+second content CSS 
+================= */
+
+.content-two {
+  width: 35%;
+  max-height: 1100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px; 
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content-two img {
+  max-width: 85%;
+  height: auto; 
+  border-radius: 10px; 
+  margin-bottom: 15px;
+}
+
+.content-two p {
+  font-size: 18px; /* Body text for readability */
+  line-height: 1.4;
+  font-family: 'Open Sans', 'Arial', sans-serif; /* Elegant and readable */
+  color: #333;
+  margin-bottom: 15px;
+  text-align: left;
+  height: 15%; /* Set a fixed height */
+  width: 80%;
+  overflow-y: auto; /* Show vertical scrollbar when content overflows */
+  white-space: normal; /* Ensure text wraps normally */
+}
+
+.content-two audio {
+  width: 60%;
+  margin-bottom: 15px;
+}
+
+/* button CSS for content-two */
+/* arrow button CSS */
+.bottom {
+  display: flex;
+  gap: 15rem; /* Adjust spacing */
+  justify-content: center; /* Center the buttons */
+}
+
+.arrow-button {
+  background-color: #0d5287;
+  color: white; 
+  border: none;
+  width: 50px; 
+  height: 50px; 
+  border-radius: 50%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+#left:after {
+  content: '';
+  border: solid white;
+  border-width: 0 4px 4px 0; 
+  display: inline-block; 
+  padding: 5px; 
+  transform: rotate(130deg);
+}
+
+#right:after {
+  content: '';
+  border: solid white;
+  border-width: 0 4px 4px 0; 
+  display: inline-block; 
+  padding: 5px; 
+  transform: rotate(-45deg);
+
+}
+
+
+.arrow-button:hover {
+  background-color: #0585e8;
+}
+/* arrow button CSS; CSS ends here*/
+
+
+/* ====================
+Footer CSS
+================= */
+footer {
+  text-align: center;
+  padding: 1rem;
+}
+
+footer hr {
+  width: 50%;
+  margin: 0 auto 1rem;
+  border: none;
+  border-top: 2px solid #ccc;
+}
+
+footer p {
+  font-size: 1rem;
+  color: #444;
+}
+
+footer a {
+  color: #0073e6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #f8f8f8;
+  padding: 1rem;
+  border-top: 3px solid #ddd;
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 1560px) {
+
+  /* display layout CSS */
+  .mainImage h1 {
+    font-size: 4.5rem; 
+   }
+
+  /* body layout - main */
+  .inner-container {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  }
+
+  /* content size CSS */
+  .content-one {
+    width: 65%;
+    max-height: 900px;
+  }
+
+  .content-two {
+    width: 65%;
+  }
+
+  .content-two p {
+    font-size: 18px; /* Body text for readability */
+    line-height: 1;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: left;
+    height: 100px; /* Set a fixed height */
+    
+  }
+
+  .content-two audio {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  /* arrow button CSS */
+.bottom {
+  display: flex;
+  justify-content: center;
+  gap: 8.5em; /* Smaller gap */
+}
+
+/* ========== 
+content-one CSS
+================== */
+
+.content-one h1 {
+  margin-top: 10px;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.content-one audio {
+  color: red;
+  width: 80%;
+   /* Full width for consistency */
+  margin: 15px 0;
+}
+
+.content-one p {
+  font-family: "Noto Sans", "Arial Unicode MS", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  text-align: justify;
+  padding: 10px;
+}
+
+.content-one .textcontainer {
+  overflow: auto;
+  width: 100%;
+  max-height: 500px; 
+  padding: 0px;
+  text-align: left;    
+  padding: 4%;
+}
+
+.content-one .textcontainer h4 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+}
+
+
+
+  /* Responsive Design */
+
+ 
+  @media (max-width: 600px) {
+
+
+    /* body layout - main */
+    .inner-container {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+  /* =============
+  nav responsive 
+  ================= */
+  .menu-toggle {
+      display: block;
+      cursor: pointer;
+      font-size: 24px;
+      color: white;
+      padding: 10px;
+      text-align: right;
+      margin-right: 20px;
+  }
+
+  ul.menu {
+      display: none; /* Hide menu initially */
+      flex-direction: column;
+      background-color: #333;
+      position: absolute;
+      top: 50px;
+      right: 0;
+      width: 100%;
+      text-align: right;
+  }
+
+  ul.menu li {
+      margin: 0;
+  }
+
+  ul.menu li a {
+      padding: 12px;
+      display: block;
+      border-top: 1px solid #444;
+  }
+
+  ul.menu.show {
+      display: flex; /* Show menu when toggled */
+  }
+  nav {
+    position: relative; /* Ensures nav stays above other content */
+    z-index: 1000; /* Keeps it on top */
+}
+
+  ul.menu {
+    position: absolute; /* Positions menu over content */
+    top: 50px; /* Push dropdown below navbar */
+    right: 0;
+    background-color: #333;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    z-index: 1000; /* Ensures menu stays above the image */
+}
+
+  ul.menu.show {
+    display: flex; /* Show menu when toggled */
+}
+
+/* ======= Banner CSS
+ ================ */
+  .mainImage h1 {
+      font-size: 2.5rem; 
+     }
+/* conten-two responsive CSS */
+  .content-one {
+    width: 95%;
+    max-height: 600px;
+  }
+
+  .content-one .textcontainer {
+    overflow: auto;
+    width: 100%;
+    max-height: 350px; 
+    padding: 5px;
+    text-align: left;    
+    padding: 4%;
+  }
+
+  .content-one h1 {
+    margin-top: 10px;
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+  }
+  
+  .content-one audio {
+    color: red;
+    width: 80%;
+     /* Full width for consistency */
+    margin: 0;
+  }
+  
+  .content-one p {
+    font-size: 1rem;
+    line-height: 1.3;
+    padding: 5px;
+  }
+  
+  
+  .content-one .textcontainer h4 {
+    font-size: 1.3rem;
+  }
+
+
+
+  .content-two {
+    width: 95%;
+  }
+  .content-two img {
+    max-width: 100%;
+    height: auto; 
+    border-radius: 10px; 
+    margin-bottom: 15px;
+  }
+  .content-two p {
+    font-size: 1rem; /* Body text for readability */
+    line-height: 1.35;
+    margin-bottom: 15px;
+    text-align: left;
+    height: 120px; /* Set a fixed height */
+  }
+  .content-two audio {
+    width: 95%;
+    margin-bottom: 10px;
+    
+  }
+
+  audio {
+    background-color: #f0f0f0; /* Optional: Light background to match your design */
+    border-radius: 5px; /* Slightly rounded corners */
+    box-shadow: none; /* Subtle shadow for a modern touch */
+  }
+
+  
+  
+
+
+/* ===============
+button CSS
+=============== */
+
+  .bottom {
+      display: flex;
+      justify-content: center;
+      gap: 9em; /* Smaller gap */
+    }
+  }

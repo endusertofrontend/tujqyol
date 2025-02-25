@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers the content vertically */
+    align-items: center; /* Centers the content horizontally */
+    font-family: Arial, sans-serif;
+    color: black;
+    height: 80vh;
+    background-color: #f8f8f8
+
+}
+
+.contact-container {
+    background-color:white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 550px;
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.email-link {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+}
+
+.email-link:hover {
+    color: #2980b9;
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+
+/* ===================
+ Nav CSS
+ =====================*/
+
+  nav {
+    background-color: #333;
+    padding: 10px 0;
+  }
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: right; /* Center the nav */
+    padding: 0;
+  }
+
+  li {
+    margin: 0 10px;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background 0.3s ease-in-out;
+  }
+
+  li a:hover {
+    background-color: #111;
+    border-radius: 5px;
+  }
+
+  .active {
+    background-color: #04AA6D;
+    border-radius: 5px;
+  }
+
+  /* ====================
+Footer CSS
+================= */
+footer {
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  footer hr {
+    width: 50%;
+    margin: 0 auto 1rem;
+    border: none;
+    border-top: 2px solid #ccc;
+  }
+  
+  footer p {
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  footer a {
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  footer {
+    background-color: #f8f8f8;
+    padding: 1rem;
+    border-top: 3px solid #ddd;
+  }
+
+
+
+  @media (max-width: 600px) {
+    .contact-container {
+        max-width: 95%;
+    }
+
+     /* =============
+  nav responsive 
+  ================= */
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    padding: 10px;
+    text-align: right;
+    margin-right: 20px;
+}
+
+ul.menu {
+    display: none; /* Hide menu initially */
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 100%;
+    text-align: right;
+}
+
+ul.menu li {
+    margin: 0;
+}
+
+ul.menu li a {
+    padding: 12px;
+    display: block;
+    border-top: 1px solid #444;
+}
+
+ul.menu.show {
+    display: flex; /* Show menu when toggled */
+}
+nav {
+  position: relative; /* Ensures nav stays above other content */
+  z-index: 1000; /* Keeps it on top */
+}
+
+ul.menu {
+  position: absolute; /* Positions menu over content */
+  top: 50px; /* Push dropdown below navbar */
+  right: 0;
+  background-color: #333;
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  z-index: 1000; /* Ensures menu stays above the image */
+}
+
+ul.menu.show {
+  display: flex; /* Show menu when toggled */
+}
+  }
